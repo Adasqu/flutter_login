@@ -514,7 +514,14 @@ class _FlutterLoginState extends State<FlutterLogin>
       ],
       child: Scaffold(
         // resizeToAvoidBottomInset: false,
-        body: Stack(
+        body: Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                      image: AssetImage('assets/login_bck.jpg'),
+                      fit: BoxFit.cover
+                      ),
+              ),
+          child: Stack(
           children: <Widget>[
             GradientBox(
               colors: [
@@ -554,6 +561,7 @@ class _FlutterLoginState extends State<FlutterLogin>
           ],
         ),
       ),
+     ),
     );
   }
 }
